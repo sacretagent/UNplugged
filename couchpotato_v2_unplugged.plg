@@ -319,7 +319,7 @@ source /boot/config/plugins/couchpotato_v2/couchpotato_v2.cfg
 	fi	
 	
 	cd /tmp
-	git clone -b $BRANCH $INSTALLURL Couchpotato
+	git clone -b $BRANCH $INSTALLURL CouchPotatoServer
 	cp -Rfu /tmp/CouchPotatoServer/. $INSTALLDIR
 	rm -Rf /tmp/CouchPotatoServer
 	
@@ -385,11 +385,11 @@ couchpotato_updateplg()
 	if [ -f couchpotato_v2_unplugged.plg ]; then
 	mv couchpotato_v2_unplugged.plg couchpotato_v2_unplugged.plg.old
 	echo "Updating plugin"
-	wget -q --no-check-certificate https://github.com/Influencer/UNplugged/raw/master/couchpotato_v2_unplugged.plg
+	wget -q --no-check-certificate https://github.com/sacretagent/UNplugged/raw/master/couchpotato_v2_unplugged.plg
 	/usr/local/sbin/installplg /boot/config/plugins/couchpotato_v2_unplugged.plg
 	else
 	echo "Updating plugin"
-	wget -q --no-check-certificate https://github.com/Influencer/UNplugged/raw/master/couchpotato_v2_unplugged.plg
+	wget -q --no-check-certificate https://github.com/sacretagent/UNplugged/raw/master/couchpotato_v2_unplugged.plg
 	/usr/local/sbin/installplg /boot/config/plugins/couchpotato_v2_unplugged.plg
 	fi
 }
