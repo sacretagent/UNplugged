@@ -108,7 +108,7 @@ rm /tmp/checkconfig
 <FILE Name="/boot/config/plugins/sabnzbd/plgver.txt">
 <INLINE>
 <![CDATA[
-2.6.1
+2.6.2
 ]]>
 </INLINE>
 </FILE>
@@ -407,11 +407,11 @@ sabnzbd_updateplg()
 	if [ -f sabnzbd_unplugged.plg ]; then
 	mv sabnzbd_unplugged.plg sabnzbd_unplugged.plg.old
 	echo "Updating plugin"
-	wget -q --no-check-certificate https://github.com/Influencer/UNplugged/raw/master/sabnzbd_unplugged.plg
+	wget -q --no-check-certificate https://github.com/sacretagent/UNplugged/raw/master/sabnzbd_unplugged.plg
 	/usr/local/sbin/installplg /boot/config/plugins/sabnzbd_unplugged.plg
 	else
 	echo "Updating plugin"
-	wget -q --no-check-certificate https://github.com/Influencer/UNplugged/raw/master/sabnzbd_unplugged.plg
+	wget -q --no-check-certificate https://github.com/sacretagent/UNplugged/raw/master/sabnzbd_unplugged.plg
 	/usr/local/sbin/installplg /boot/config/plugins/sabnzbd_unplugged.plg
 	fi
 }
