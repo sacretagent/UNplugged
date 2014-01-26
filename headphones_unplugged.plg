@@ -333,11 +333,11 @@ headphones_updateplg()
 	[ -f headphones_unplugged.plg.old ] && rm -f headphones_unplugged.plg.old
 	mv headphones_unplugged.plg headphones_unplugged.plg.old
 	echo "Updating plugin"
-	wget -q --no-check-certificate https://github.com/Influencer/UNplugged/raw/master/headphones_unplugged.plg
+	wget -q --no-check-certificate https://github.com/sacretagent/UNplugged/raw/master/headphones_unplugged.plg
 	/usr/local/sbin/installplg /boot/config/plugins/headphones_unplugged.plg
 	else
 	echo "Updating plugin"
-	wget -q --no-check-certificate https://github.com/Influencer/UNplugged/raw/master/headphones_unplugged.plg
+	wget -q --no-check-certificate https://github.com/sacretagent/UNplugged/raw/master/headphones_unplugged.plg
 	/usr/local/sbin/installplg /boot/config/plugins/headphones_unplugged.plg
 	fi
 }
