@@ -74,7 +74,7 @@ rm /tmp/sickbeard-cleanup
 <FILE Name="/boot/config/plugins/sickbeard/plgver.txt">
 <INLINE>
 <![CDATA[
-2.5.1
+2.6.2
 ]]>
 </INLINE>
 </FILE>
@@ -383,11 +383,11 @@ sickbeard_updateplg()
 	if [ -f sickbeard_unplugged.plg ]; then
 	mv sickbeard_unplugged.plg sickbeard_unplugged.plg.old
 	echo "Updating plugin"
-	wget -q --no-check-certificate https://github.com/Influencer/UNplugged/raw/master/sickbeard_unplugged.plg
+	wget -q --no-check-certificate https://github.com/sacretagent/UNplugged/raw/master/sickbeard_unplugged.plg
 	/usr/local/sbin/installplg /boot/config/plugins/sickbeard_unplugged.plg
 	else
 	echo "Updating plugin"
-	wget -q --no-check-certificate https://github.com/Influencer/UNplugged/raw/master/sickbeard_unplugged.plg
+	wget -q --no-check-certificate https://github.com/sacretagent/UNplugged/raw/master/sickbeard_unplugged.plg
 	/usr/local/sbin/installplg /boot/config/plugins/sickbeard_unplugged.plg
 	fi
 }
